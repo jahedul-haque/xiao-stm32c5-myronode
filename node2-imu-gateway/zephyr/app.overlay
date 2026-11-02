@@ -1,0 +1,13 @@
+/*
+ * Devicetree overlay for Seeed Studio XIAO STM32C5 - Node 2 (IMU Leader & micro-ROS Gateway)
+ */
+/ {
+	chosen {
+		zephyr,console = &cdc_acm_uart0;
+		zephyr,shell-uart = &cdc_acm_uart0;
+	};
+
+	aliases {
+		node-led = &user_led;
+	};
+};

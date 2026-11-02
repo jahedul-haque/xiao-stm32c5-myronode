@@ -1,0 +1,15 @@
+/*
+ * Devicetree overlay for Seeed Studio XIAO STM32C5 - Node 1 (Servo Follower)
+ * Feetech SCS0009 Serial Bus Servo on USART1 (PA9 TX, PA10 RX)
+ */
+/ {
+	aliases {
+		servo-uart = &usart1;
+		node-led = &user_led;
+	};
+};
+
+&usart1 {
+	current-speed = <1000000>;
+	status = "okay";
+};
